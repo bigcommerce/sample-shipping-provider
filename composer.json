@@ -24,7 +24,9 @@
         "symfony/validator": "~2.8|^3.0"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": {
+            "BCSample\\Shipping\\": "src"
+        }
     },
     "extra": {
         "branch-alias": {
@@ -34,6 +36,11 @@
     "scripts": {
         "run": [
             "echo 'Started web server on http://localhost:8888'",
+            "php -S localhost:8888 -t web"
+        ],
+        "devrun": [
+            "echo 'Started web server on http://localhost:8888'",
+            "rm -rf var/cache",
             "php -S localhost:8888 -t web"
         ]
     }
