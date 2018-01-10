@@ -4,6 +4,7 @@ namespace BCSample\Shipping\Provider;
 
 use BCSample\Shipping\Domain\ShippingRates\ShippingRateAPIController;
 use BCSample\Shipping\Domain\ShippingRates\ShippingRateAPIService;
+use BCSample\Shipping\Helper\FixtureLoader;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -21,7 +22,7 @@ class ShippingRateServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        $app[ShippingRateAPIController::class] = new ShippingRateAPIController();
-        $app[ShippingRateAPIService::class] = new ShippingRateAPIService();
+        $app[ShippingRateAPIService::class] = new ShippingRateAPIService($app[FixtureLoader::class]);
+        $app[ShippingRateAPIController::class] = new ShippingRateAPIController($app[ShippingRateAPIService::class]);
     }
 }

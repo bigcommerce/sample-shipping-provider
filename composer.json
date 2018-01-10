@@ -41,7 +41,7 @@
         "devrun": [
             "echo 'Started web server on http://localhost:8888'",
             "rm -rf var/cache",
-            "php -S localhost:8888 -t web"
+            "php -dxdebug.remote_autostart=1 -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -S localhost:8888 -t web"
         ]
     }
 }

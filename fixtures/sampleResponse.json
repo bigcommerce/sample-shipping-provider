@@ -1,0 +1,69 @@
+{
+  "quote_id": "sample_quote_1",
+  "messages": [
+    {
+      "text": "Service XYZ cannot ship to BLAH",
+      "type": "WARNING"
+    }
+  ],
+  "carrier_quotes": [
+    {
+      "quotes": [
+        {
+          "code": "puis",
+          "display_name": "Pick up in store",
+          "cost": {
+            "currency": "USD",
+            "amount": 0
+          }
+        }
+      ]
+    },
+    {
+      "carrier_info": {
+        "code": "ups",
+        "display_name": "United Parcel Service"
+      },
+      "quotes": [
+        {
+          "code": "3de",
+          "display_name": "3 Day Express™",
+          "cost": {
+            "currency": "USD",
+            "amount": 13.53
+          },
+          "rate_id": "1",
+          "discounted_cost": {
+            "currency": "USD",
+            "amount": 12.35
+          },
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 0.47
+          },
+          "transit_time": {
+            "units": "BUSINESS_DAYS",
+            "duration": 3
+          },
+          "dispatch_date": "2017-12-14T00:20:53+0000"
+        },
+        {
+          "code": "edsm",
+          "display_name": "El dodgo surface mail",
+          "description": "Budget surface mail shipped with unmanned inflatable barges",
+          "cost": {
+            "currency": "GBP",
+            "amount": 2.00
+          },
+          "rate_id": "2",
+          "messages": [
+            {
+              "text": "Delivery not guaranteed :)",
+              "type": "INFO"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
