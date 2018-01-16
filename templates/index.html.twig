@@ -1,7 +1,26 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+<div>
     This is a sample implementation of a customer Shipping Carrier Service integration with BigCommerce.
-
+</div>
+<div>
     Please go to the DOCS for more info on how to extend this application.
+</div>
+<br/>
+<div>
+    POST to /sample-carrier-service/rates in the supported format to return sample shipping rates.
+</div>
+<br/>
+<div>
+    Change the destination country code to one of the values below to get the corresponding sample response.
+</div>
+<div>
+    NOTE: Any other country value will default to use the '{{ defaultCountryCode }}' fixture.
+</div>
+<ul>
+{% for countryCode, entry in fixtures %}
+    <li>{{ countryCode }} - {{ entry.description }}</li>
+{% endfor %}
+</ul>
 {% endblock %}

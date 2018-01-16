@@ -2,7 +2,7 @@
 
 namespace BCSample\Shipping\Domain\ShippingRates;
 
-interface SimpleRateAPIService
+interface SimpleRateAPIServiceInterface
 {
     /**
      * Implement this method with any request validation, transformation and rates retrieval and response serialization logic

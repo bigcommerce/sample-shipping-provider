@@ -2,10 +2,9 @@
 
 namespace BCSample\Shipping\Domain\ShippingRates;
 
-use BCSample\Shipping\Helper\SampleFixtureCountryMap;
 use BCSample\Shipping\Helper\SampleFixtureLoader;
 
-class StubbedShippingRateAPIService implements SimpleRateAPIService
+class StubbedShippingRateAPIService implements SimpleRateAPIServiceInterface
 {
     /** @var SampleFixtureLoader */
     private $fixtureLoader;
@@ -27,13 +26,11 @@ class StubbedShippingRateAPIService implements SimpleRateAPIService
     {
         $countryCode = $this->getDestinationCountryCode($requestPayload);
 
-        $this->fixtureLoader->getFixtureForCountryMappings($countryCode);
+        return $this->fixtureLoader->getFixtureForCountryMappings($countryCode);
     }
 
     private function getDestinationCountryCode($requestPayload)
     {
-        return $requestPayload['base_options']['origin']['country_iso2'];
+        return $requestPayload['base_options']['destination']['country_iso2'];
     }
-
-
 }

@@ -33,6 +33,19 @@ class SampleFixtureCountryMap
 
     public static function getEntryForCountryCode($countryCode)
     {
-        return self::$mapping[$countryCode] ?: self::$mapping[self::$defaultCountry];
+        return self::$mapping[$countryCode] ?? self::$mapping[self::$defaultCountry];
+    }
+
+    public static function getMapping()
+    {
+        return self::$mapping;
+    }
+
+    /**
+     * @return string
+     */
+    public static function getDefaultCountry()
+    {
+        return self::$defaultCountry;
     }
 }
