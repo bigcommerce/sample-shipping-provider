@@ -1,0 +1,83 @@
+{
+  "quote_id": "sample_quote_1",
+  "messages": [
+    {
+      "text": "Could not retrieve rates for Fedex",
+      "type": "ERROR"
+    },
+    {
+      "text": "This is some global information message, seen by the merchant and shopper",
+      "type": "INFO"
+    }
+  ],
+  "carrier_quotes": [
+    {
+      "carrier_info": {
+        "code": "dps",
+        "display_name": "Divided Parcel Service"
+      },
+      "quotes": [
+        {
+          "code": "dpsdd",
+          "display_name": "Immediate drone delivery",
+          "cost": {
+            "currency": "USD",
+            "amount": 25.00
+          },
+          "transit_time": {
+            "units": "HOURS",
+            "duration": 1
+          }
+        }
+      ]
+    },
+    {
+      "carrier_info": {
+        "code": "2gbl",
+        "display_name": "2 Guys in a Bronco Ltd"
+      },
+      "quotes": [
+        {
+          "code": "2_bus_day_std",
+          "display_name": "Standard 2 business day",
+          "cost": {
+            "currency": "USD",
+            "amount": 19.85
+          },
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 3.20
+          },
+          "transit_time": {
+            "units": "BUSINESS_DAYS",
+            "duration": 2
+          }
+        },
+        {
+          "code": "area_delivery",
+          "display_name": "Within 30 days",
+          "description": "Will deliver when we are in your area, within 30 days of dispatch",
+          "cost": {
+            "currency": "USD",
+            "amount": 2.00
+          },
+          "rate_id": "2",
+          "transit_time": {
+            "units": "DAYS",
+            "duration": 30
+          },
+          "messages": [
+            {
+              "text": "Use this option for non-expedient delivery",
+              "type": "INFO"
+            },
+            {
+              "text": "Delivery to the supplied address may take longer",
+              "type": "WARNING"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

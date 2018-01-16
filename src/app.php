@@ -1,6 +1,6 @@
 <?php
 
-use BCSample\Shipping\Helper\FixtureLoader;
+use BCSample\Shipping\Helper\SampleFixtureLoader;
 use BCSample\Shipping\Provider\ShippingRateServiceProvider;
 use Silex\Application;
 use Silex\Provider\AssetServiceProvider;
@@ -16,9 +16,9 @@ $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 
 
-$app[FixtureLoader::class] = function ()
+$app[SampleFixtureLoader::class] = function ()
 {
-    return new FixtureLoader();
+    return new SampleFixtureLoader();
 };
 
 // app specific dependencies

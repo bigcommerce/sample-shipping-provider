@@ -1,0 +1,61 @@
+{
+  "quote_id": "sample_quote_1",
+  "carrier_quotes": [
+    {
+      "quotes": [
+        {
+          "code": "3de",
+          "display_name": "3 Day Express™",
+          "cost": {
+            "currency": "USD",
+            "amount": 13.53
+          },
+          "rate_id": "sample_rate_1",
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 3.47
+          },
+          "transit_time": {
+            "units": "BUSINESS_DAYS",
+            "duration": 3
+          },
+          "dispatch_date": "2017-12-14T00:20:53+0000"
+        },
+        {
+          "code": "1de",
+          "display_name": "Overnight Express™",
+          "cost": {
+            "currency": "USD",
+            "amount": 60.43
+          },
+          "rate_id": "sample_rate_3",
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 5.00
+          },
+          "transit_time": {
+            "units": "BUSINESS_DAYS",
+            "duration": 1
+          },
+          "dispatch_date": "2017-12-14T00:20:53+0000"
+        },
+        {
+          "code": "ssm",
+          "display_name": "Standard surface mail",
+          "description": "Budget surface mail shipped with unmanned inflatable barges",
+          "cost": {
+            "currency": "GBP",
+            "amount": 2.00
+          },
+          "rate_id": "sample_rate_2",
+          "messages": [
+            {
+              "text": "Delivery not guaranteed :)",
+              "type": "INFO"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 namespace BCSample\Shipping\Helper;
 
-class FixtureLoader
+class SampleFixtureLoader
 {
     const DIRECTORY_SEPARATOR = '/';
 
@@ -22,5 +22,14 @@ class FixtureLoader
     public function loadFile($filename)
     {
         return file_get_contents(FIXTURES_DIR . DIRECTORY_SEPARATOR . $filename);
+    }
+
+    /**
+     * @param $countryCode
+     * @return array|null
+     */
+    public function getFixtureForCountryMappings($countryCode)
+    {
+        return $this->loadJson(SampleFixtureCountryMap::getEntryForCountryCode($countryCode)['filename']);
     }
 }

@@ -8,14 +8,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ShippingRateAPIController
 {
-    /** @var ShippingRateAPIService */
+    /** @var StubbedShippingRateAPIService */
     private $rateAPIService;
 
     /**
      * ShippingRateAPIController constructor.
-     * @param ShippingRateAPIService $rateAPIService
+     * @param StubbedShippingRateAPIService $rateAPIService
      */
-    public function __construct(ShippingRateAPIService $rateAPIService)
+    public function __construct(StubbedShippingRateAPIService $rateAPIService)
     {
         $this->rateAPIService = $rateAPIService;
     }

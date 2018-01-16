@@ -1,0 +1,58 @@
+{
+  "quote_id": "sample_quote_2",
+  "carrier_quotes": [
+    {
+      "quotes": [
+        {
+          "code": "1de",
+          "display_name": "Overnight Express™",
+          "cost": {
+            "currency": "USD",
+            "amount": 60.43
+          },
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 5.00
+          },
+          "messages": [
+            {
+              "text": "Liftgate required at destination",
+              "type": "WARNING"
+            }
+          ]
+        },{
+          "code": "3de",
+          "display_name": "3 Day Express™",
+          "cost": {
+            "currency": "USD",
+            "amount": 13.53
+          },
+          "handling_fee": {
+            "currency": "USD",
+            "amount": 3.47
+          },
+          "messages": [
+            {
+              "text": "Delivery subject to approval",
+              "type": "WARNING"
+            }
+          ]
+        },
+        {
+          "code": "ssm",
+          "display_name": "Standard surface mail",
+          "cost": {
+            "currency": "GBP",
+            "amount": 2.00
+          },
+          "messages": [
+            {
+              "text": "Delivery not guaranteed :)",
+              "type": "INFO"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
