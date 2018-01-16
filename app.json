@@ -1,0 +1,7 @@
+{
+  "name": "BigCommerce Carrier Service Sample",
+  "description": "Simple example of how to integrate with the BigCommerce Carrier Service, using the PHP Silex microframework",
+  "repository": "https://github.com/vborinsk/carrier-service-reference-app",
+  "logo": "https://developer.bigcommerce.com/images/developer.png",
+  "keywords": ["php", "silex", "bigcommerce", "shipping"]
+}

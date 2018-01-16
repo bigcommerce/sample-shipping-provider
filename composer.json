@@ -1,10 +1,10 @@
 {
-    "name": "fabpot/silex-skeleton",
-    "description": "A pre-configured skeleton for the Silex microframework",
+    "name": "vborinski/carrier-service-reference-app",
+    "description": "Silex based reference implementation of a Shipping Carrier Service integration",
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.0.23",
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/asset": "~2.8|^3.0",
@@ -39,7 +39,7 @@
             "php -S localhost:8888 -t web"
         ],
         "devrun": [
-            "echo 'Started web server on http://localhost:8888'",
+            "echo 'Started debugging web server on http://localhost:8888'",
             "rm -rf var/cache",
             "php -dxdebug.remote_autostart=1 -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -S localhost:8888 -t web"
         ]
