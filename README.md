@@ -16,6 +16,8 @@ Check composer.json but in general:
 ## Running locally
 
 ```
+    $ git clone ...
+    $ composer install
     $ COMPOSER_PROCESS_TIMEOUT=0 composer run
 ```
 
