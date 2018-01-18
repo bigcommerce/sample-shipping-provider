@@ -12,6 +12,11 @@ class SampleFixtureCountryMap
     private static $mapping = [
         'US' => [
             'description' =>
+                '2 carriers, 3 rates similar to NZ response',
+            'filename' => 'sampleResponse.json',
+        ],
+        'CA' => [
+            'description' =>
                 'Response with 3 quotes with a dispatch and a transit time, 
                 from one carrier, with no carrier info, with rate ids
                 ',
