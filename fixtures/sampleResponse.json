@@ -2,7 +2,7 @@
   "quote_id": "sample_quote_1",
   "messages": [
     {
-      "text": "Service XYZ cannot ship to BLAH",
+      "text": "This service cannot ship to your location",
       "type": "WARNING"
     }
   ],
@@ -48,9 +48,9 @@
           "dispatch_date": "2017-12-14T00:20:53+0000"
         },
         {
-          "code": "edsm",
-          "display_name": "El dodgo surface mail",
-          "description": "Budget surface mail shipped with unmanned inflatable barges",
+          "code": "ground",
+          "display_name": "Ground Delivery",
+          "description": "A cost efficient ground shipping solution",
           "cost": {
             "currency": "GBP",
             "amount": 2.00
@@ -58,7 +58,7 @@
           "rate_id": "2",
           "messages": [
             {
-              "text": "Delivery not guaranteed :)",
+              "text": "Delivery in 1 to 5 days",
               "type": "INFO"
             }
           ]

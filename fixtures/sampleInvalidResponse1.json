@@ -1,0 +1,17 @@
+{
+  "quote_id": "sample_quote_1",
+  "carrier_quotes": [
+    {
+      "quotes": [
+        {
+          "code": "puis",
+          "display_name": "Pick up in store",
+          "cost": {
+            "currency": "USD",
+            "amount": 0
+          }
+        }
+      ]
+    }
+  ]
+}

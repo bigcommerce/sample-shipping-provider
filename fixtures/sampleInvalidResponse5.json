@@ -1,0 +1,12 @@
+{
+  "quote_id": "sample_quote_1",
+  "messages": [],
+  "carrier_quotes": [
+    {
+      "carrier_info": {
+        "display_name": "United Parcel Service"
+      },
+      "quotes": []
+    }
+  ]
+}

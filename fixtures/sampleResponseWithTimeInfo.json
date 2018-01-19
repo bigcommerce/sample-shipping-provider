@@ -42,7 +42,7 @@
         {
           "code": "ssm",
           "display_name": "Standard surface mail",
-          "description": "Budget surface mail shipped with unmanned inflatable barges",
+          "description": "Cost efficient standard delivery",
           "cost": {
             "currency": "GBP",
             "amount": 2.00
@@ -50,7 +50,7 @@
           "rate_id": "sample_rate_2",
           "messages": [
             {
-              "text": "Delivery not guaranteed :)",
+              "text": "No frills delivery service",
               "type": "INFO"
             }
           ]

@@ -1,0 +1,10 @@
+{
+  "quote_id": "sample_quote_1",
+  "messages": [
+    {
+      "text": "This service cannot ship to your location",
+      "type": "WARNING"
+    }
+  ],
+  "carrier_quotes": []
+}

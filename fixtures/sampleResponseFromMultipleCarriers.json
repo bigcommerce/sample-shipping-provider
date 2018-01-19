@@ -2,7 +2,7 @@
   "quote_id": "sample_quote_1",
   "messages": [
     {
-      "text": "Could not retrieve rates for Fedex",
+      "text": "Could not retrieve rates for FedEx",
       "type": "ERROR"
     },
     {
@@ -18,8 +18,8 @@
       },
       "quotes": [
         {
-          "code": "dpsdd",
-          "display_name": "Immediate drone delivery",
+          "code": "dds",
+          "display_name": "Drone Delivery Service",
           "cost": {
             "currency": "USD",
             "amount": 25.00
@@ -33,12 +33,12 @@
     },
     {
       "carrier_info": {
-        "code": "2gbl",
-        "display_name": "2 Guys in a Bronco Ltd"
+        "code": "auspost",
+        "display_name": "Australia Post"
       },
       "quotes": [
         {
-          "code": "2_bus_day_std",
+          "code": "2_day_std",
           "display_name": "Standard 2 business day",
           "cost": {
             "currency": "USD",
