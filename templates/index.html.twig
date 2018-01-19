@@ -20,7 +20,7 @@
 </div>
 <ul>
 {% for countryCode, entry in fixtures %}
-    <li>{{ countryCode }} - {{ entry.description }}</li>
+    <li>{{ countryCode }} ({{ entry.countryName }}) - {{ entry.description }}</li>
 {% endfor %}
 </ul>
 {% endblock %}
