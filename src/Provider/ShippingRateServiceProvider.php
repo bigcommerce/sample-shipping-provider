@@ -22,7 +22,10 @@ class ShippingRateServiceProvider implements ServiceProviderInterface
      */
     public function register(Container $app)
     {
-        $app[StubbedShippingRateAPIService::class] = new StubbedShippingRateAPIService($app[SampleFixtureLoader::class]);
+        $app[StubbedShippingRateAPIService::class] = new StubbedShippingRateAPIService(
+            $app[SampleFixtureLoader::class],
+            $app['monolog']
+        );
         $app[ShippingRateAPIController::class] = new ShippingRateAPIController($app[StubbedShippingRateAPIService::class]);
     }
 }
