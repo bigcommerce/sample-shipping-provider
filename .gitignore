@@ -1,3 +1,5 @@
 /vendor/
 /var/cache
 /var/log
+/node_modules
+/tmp
