@@ -32,7 +32,7 @@ Then, browse to http://localhost:8888
 Or do the manual thing...
 
 ```
-    $ heroku login
+    $ heroku login -i
     $ heroku create
     $ git push heroku master
     $ heroku open
