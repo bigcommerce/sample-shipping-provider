@@ -7,7 +7,7 @@ It is designed to quickly deploy to Heroku and let you get started on your devel
 
 Check composer.json but in general:
 
-- PHP >=7
+- PHP >=8.0
 
 - composer
 
