@@ -3,3 +3,4 @@
 /var/log
 /node_modules
 /tmp
+.idea
