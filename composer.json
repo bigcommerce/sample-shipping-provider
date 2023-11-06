@@ -1,10 +1,10 @@
 {
-    "name": "vborinski/carrier-service-reference-app",
+    "name": "bigcommerce/sample-shipping-provider",
     "description": "Silex based reference implementation of a Shipping Carrier Service integration",
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=8.0.0",
+        "php": "^8.2",
         "silex/silex": "~2.0",
         "silex/web-profiler": "~2.0",
         "symfony/asset": "~2.8|^3.0",
