@@ -1,0 +1,26 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  BCSample\Shipping\:
+    resource: '../src/'
+    exclude:
+      - '../src/Kernel.php'
+      - '../src/constants.php'
+
+  BCSample\Shipping\Controller\:
+    resource: '../src/Controller/'
+    tags: ['controller.service_arguments']
+
+  BCSample\Shipping\Helper\SampleFixtureLoader: ~
+
+  BCSample\Shipping\Domain\ShippingRates\StubbedShippingRateAPIService:
+    arguments:
+      $fixtureLoader: '@BCSample\Shipping\Helper\SampleFixtureLoader'
+      $logger: '@Psr\Log\LoggerInterface'
+
+  BCSample\Shipping\Domain\ShippingRates\ShippingRateAPIController:
+    arguments:
+      $rateAPIService: '@BCSample\Shipping\Domain\ShippingRates\StubbedShippingRateAPIService'
+    tags: ['controller.service_arguments']

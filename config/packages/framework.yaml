@@ -1,0 +1,8 @@
+framework:
+  secret: '%env(APP_SECRET)%'
+  http_method_override: false
+  handle_all_throwables: true
+  error_controller: BCSample\Shipping\Controller\ErrorController::show
+  router:
+    utf8: true
+  session: false

@@ -1,47 +1,48 @@
 {
     "name": "bigcommerce/sample-shipping-provider",
-    "description": "Silex based reference implementation of a Shipping Carrier Service integration",
+    "description": "Symfony based reference implementation of a Shipping Carrier Service integration",
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.2",
-        "silex/silex": "~2.0",
-        "silex/web-profiler": "~2.0",
-        "symfony/asset": "~2.8|^3.0",
-        "symfony/browser-kit": "~2.8|^3.0",
-        "symfony/class-loader": "~2.8|^3.0",
-        "symfony/config": "~2.8|^3.0",
-        "symfony/console": "~2.8|^3.0",
-        "symfony/css-selector": "~2.8|^3.0",
-        "symfony/debug": "~2.8|^3.0",
-        "symfony/finder": "~2.8|^3.0",
-        "symfony/form": "~2.8|^3.0",
-        "symfony/monolog-bridge": "~2.8|^3.0",
-        "symfony/process": "~2.8|^3.0",
-        "symfony/security": "~2.8|^3.0",
-        "symfony/translation": "~2.8|^3.0",
-        "symfony/twig-bridge": "~2.8|^3.0",
-        "symfony/validator": "~2.8|^3.0"
+        "php": "^8.4",
+        "symfony/framework-bundle": "^8.0",
+        "symfony/runtime": "^8.0",
+        "symfony/yaml": "^8.0",
+        "symfony/dotenv": "^8.0",
+        "symfony/twig-bundle": "^8.0",
+        "symfony/asset": "^8.0",
+        "symfony/monolog-bundle": "^4.0",
+        "symfony/console": "^8.0",
+        "symfony/config": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "symfony/browser-kit": "^8.0",
+        "symfony/css-selector": "^8.0"
     },
     "autoload": {
+        "files": [
+            "src/constants.php"
+        ],
         "psr-4": {
             "BCSample\\Shipping\\": "src"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0.x-dev"
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "symfony/flex": true
         }
     },
     "scripts": {
         "run": [
             "echo 'Started web server on http://localhost:8888'",
-            "php -S localhost:8888 -t web"
+            "php -S localhost:8888 -t public public/index.php"
         ],
         "devrun": [
             "echo 'Started debugging web server on http://localhost:8888'",
             "rm -rf var/cache",
-            "php -dxdebug.remote_autostart=1 -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -S localhost:8888 -t web"
+            "php -dxdebug.remote_autostart=1 -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -S localhost:8888 -t public public/index.php"
         ]
     }
 }

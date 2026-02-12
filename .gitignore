@@ -4,3 +4,5 @@
 /node_modules
 /tmp
 .idea
+.phpunit.result.cache
+/config/reference.php
