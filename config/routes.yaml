@@ -1,0 +1,17 @@
+homepage:
+  path: /
+  methods: [GET]
+  defaults:
+    _controller: BCSample\Shipping\Controller\HomeController::index
+
+shipping_rates:
+  path: /sample-carrier-service/rates
+  methods: [POST]
+  defaults:
+    _controller: BCSample\Shipping\Domain\ShippingRates\ShippingRateAPIController::getRates
+
+health:
+  path: /health
+  methods: [GET]
+  defaults:
+    _controller: BCSample\Shipping\Controller\HealthController::health

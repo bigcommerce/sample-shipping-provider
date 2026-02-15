@@ -1,13 +1,13 @@
-# Silex based reference implementation of a Shipping Carrier Service integration
+# Symfony based reference implementation of a Shipping Carrier Service integration
 
-This is a very simple reference application based on the PHP Silex microframework, that demonstrates how to process a request from the BigCommerce Carrier Service integration and return a valid response.
+This is a very simple reference application based on Symfony, that demonstrates how to process a request from the BigCommerce Carrier Service integration and return a valid response.
 It is designed to quickly deploy to Heroku and let you get started on your development with minimal ramp-up.
 
 ## Requirements
 
 Check composer.json but in general:
 
-- PHP >=8.2
+- PHP >=8.4
 
 - composer
 
@@ -18,12 +18,19 @@ Check composer.json but in general:
 ```
     $ git clone ...
     $ composer install
-    $ COMPOSER_PROCESS_TIMEOUT=0 composer run
+    $ COMPOSER_PROCESS_TIMEOUT=0 composer run-script run
 ```
 
 Then, browse to http://localhost:8888
 
 **Note** To enable xdebug support replace `run` with `devrun` (see composer.json 'scripts' sections for details)
+
+## Running tests
+
+```
+    $ composer install
+    $ ./vendor/bin/phpunit
+```
 
 ## Running on Heroku
 
@@ -47,13 +54,13 @@ Or do the manual thing...
 The default landing page contains an overview of how to trigger various shipping rate responses from the sample app.
 
 
-- `ShippingRateServiceProvider.php` registers (within the DI container) the API controller and service (below) for the BC sample responses provided
+- `config/services.yaml` wires the API controller and service used for the sample responses.
 
 - `ShippingRateAPIController.php` the basic API controller with minimal validation and error handling to pass POST requests to an API service
 
 - `StubbedShippingRateAPIService.php` the basic rate API service that returns a static json file based on the rate request destination country code
 
-- `SimpleRateAPIServiceInterface.php` a simple interface that you can extend from to build to your own rate service (just change the provider above to instantiate your new service instead of the stubbed one)
+- `SimpleRateAPIServiceInterface.php` a simple interface that you can extend from to build to your own rate service (just change the DI wiring above to instantiate your new service instead of the stubbed one)
 
 
 ## Disclaimer
